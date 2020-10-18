@@ -10,44 +10,32 @@ logo_url: https://routify-netlifycms.netlify.app/images/hero.jpg
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
-  # - name: "blog" # Used in routes, e.g., /admin/collections/blog
-  #   label: "Blog" # Used in the UI
-  #   folder: "src/pages/cms/blog" # The path to the folder where the documents are stored
-  #   create: true # Allow users to create new documents in this collection
-  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-  #   fields: # The fields for each document, usually in front matter
-  #     - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-  #     - {label: "Title", name: "title", widget: "string"}
-  #     - {label: "Publish Date", name: "date", widget: "datetime"}
-  #     - {label: "Featured Image", name: "thumbnail", widget: "image"}
-  #     - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-  #     - {label: "Body", name: "body", widget: "markdown"}
-  - name: "equipe"
-    label: "Membre d'équipe"
+  - name: "team"
+    label: "Team members"
     extension: "md"
-    folder: "src/pages/equipe"
+    folder: "src/pages/team"
     create: true # Allow users to create new documents in this collection
     slug: "{{name}}"
     fields:
-      - { name: "name", label: "nom", widget: "string" }
+      - { name: "name", label: "name", widget: "string" }
       - { name: "bio", label: "bio", widget: "markdown" }
       - { name: "order", label: "order", widget: "number" }
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
   - name: "homepage"
     label: "Homepage"
     extension: "md"
-    folder: "src/pages/cms/accueil"
+    folder: "src/pages/cms/homepage"
     create: false # Allow users to create new documents in this collection
     slug: "{{title}}"
     fields:
       - { name: "title", label: "Titre (<h1>)", widget: "string" }
       - { name: "text", label: "texte", widget: "markdown" }
-  - name: "festival"
-    label: "festival"
+  - name: "markdown"
+    label: "markdown"
     extension: "md"
-    folder: "src/pages/cms/festival"
+    folder: "src/pages/cms/markdown"
     create: false # Allow users to create new documents in this collection
     slug: "{{name}}"
     fields:
-      - { name: "title", label: "Titre (<h1>)", widget: "string" }
-      - { name: "text", label: "texte", widget: "markdown" }
+      - { name: "title", label: "Title (<h1>)", widget: "string" }
+      - { name: "text", label: "text", widget: "markdown" }

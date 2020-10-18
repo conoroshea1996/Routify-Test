@@ -7,11 +7,11 @@
   const width = writable();
   const color = writable();
   const _urls = [
-    ["./accueil", "🏠", "#FF6500"],
-    ["./festival", "Festival", "#8FD5DB"],
+    ["./homepage", "🏠", "#FF6500"],
+    ["./markdown", "markdown", "#8FD5DB"],
     ["./retraite", "Retraites", "#A1FAC3"],
     ["./historique", "Historique", "#0bF5CC"],
-    ["./equipe", "L'équipe", "#88F0d0"],
+    ["./team", "Team", "#88F0d0"],
   ];
   $: urls = _urls.map(([path, name, color]) => ({
     name,
@@ -25,7 +25,7 @@
   // prefetch('/festival')
   // prefetch('/retraite')
   // prefetch('/historique')
-  // prefetch('/equipe')
+  // prefetch('/team')
 </script>
 
 <style>

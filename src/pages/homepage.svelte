@@ -6,7 +6,7 @@
 
   import { layout } from "@roxi/routify";
   import { getCMSData } from "./_components/GetCMSData.svelte"
-  const cmsData = getCMSData($layout, "accueil")
+  const cmsData = getCMSData($layout, "homepage")
 
   import {fade} from 'svelte/transition'
 	

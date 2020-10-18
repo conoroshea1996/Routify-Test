@@ -37,7 +37,7 @@
 
 
 <br />
-<h1>L'équipe</h1>
+<h1>The Team</h1>
 <ul class="posts">
   {#each posts as {meta, path}}
     <li class="card"> 
