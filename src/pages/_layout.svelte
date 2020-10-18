@@ -9,8 +9,6 @@
   const _urls = [
     ["./homepage", "🏠", "#FF6500"],
     ["./markdown", "markdown", "#8FD5DB"],
-    ["./retraite", "Retraites", "#A1FAC3"],
-    ["./historique", "Historique", "#0bF5CC"],
     ["./team", "Team", "#88F0d0"],
   ];
   $: urls = _urls.map(([path, name, color]) => ({
@@ -19,13 +17,7 @@
     color,
     active: !!$isActive(path)
   }));
-  
-  // $: urlOrder = urls.map(({href}) => href);
-  // import { prefetch } from '@roxi/routify'
-  // prefetch('/festival')
-  // prefetch('/retraite')
-  // prefetch('/historique')
-  // prefetch('/team')
+
 </script>
 
 <style>

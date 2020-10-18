@@ -1,5 +1,5 @@
 <script >
-  import { url, layout } from "@roxi/routify";
+  import { layout } from "@roxi/routify";
   import marked from "marked";
 
   const posts = $layout.parent.children
@@ -52,9 +52,6 @@
     </li> -->
   {/each}
 </ul>
-<section class="content">
-  <p>On pourrais inclure des liens vers vos comptes instagram, twitter, etc...</p>
-</section>
 <br>
 
 
