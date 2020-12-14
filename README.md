@@ -2,6 +2,8 @@
 
 Demo repo for [this tutorial on setting up Routify with NetlifyCMS](https://www.felixparadis.com/posts/integrating-netlifycms-with-routify/)
 
+Access the live site at https://routify-netlifycms.netlify.app/homepage
+
 This project is based on the [routify starter](https://github.com/roxiness/routify-starter), original README.md ↓
 
 ### npm scripts
