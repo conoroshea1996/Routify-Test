@@ -28,8 +28,8 @@ collections:
     create: false # Allow users to create new documents in this collection
     slug: "{{title}}"
     fields:
-      - { name: "title", label: "Titre (<h1>)", widget: "string" }
-      - { name: "text", label: "texte", widget: "markdown" }
+      - { name: "title", label: "Title (<h1>)", widget: "string" }
+      - { name: "text", label: "text", widget: "markdown" }
   - name: "markdown"
     label: "markdown"
     extension: "md"
