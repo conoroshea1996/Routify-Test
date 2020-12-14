@@ -4,11 +4,12 @@
   metatags.title = 'NetlifyCMS & Routify'
   metatags.description = 'Demo integration of NetlifyCMS with Routify'
 
+  import marked from "marked";
   import { layout } from "@roxi/routify";
   import { getCMSData } from "./_components/GetCMSData.svelte"
   
   const cmsData = getCMSData($layout, "homepage")
-  
+
 </script>
 
 <style>
@@ -43,5 +44,7 @@
 <main>
   <br />
   <h1>{cmsData.title}</h1>
-  <p>{cmsData.text}</p>
+  <div class="content">
+    {@html marked(cmsData.text)}
+  </div>
 </main>

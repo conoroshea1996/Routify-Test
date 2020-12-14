@@ -1,6 +1,6 @@
 import { createRollupConfigs } from './scripts/base.config.js'
-import slug from 'remark-slug'
-import { mdsvex } from 'mdsvex'
+// import slug from 'remark-slug'
+// import { mdsvex } from 'mdsvex'
 import autoPreprocess from 'svelte-preprocess'
 import postcssImport from 'postcss-import'
 
@@ -18,14 +18,16 @@ export const config = {
       autoPreprocess({
         postcss: { plugins: [postcssImport()] },
         defaults: { style: 'postcss' }
-      }),
-      mdsvex({
-        remarkPlugins: [slug],
-        // layout: {
-        //   blog: 'src/components/Card.svelte'
-        // },
-        extension: 'md'
-      })]
+      })
+      // ,
+      // mdsvex({
+      //   remarkPlugins: [slug],
+      //   // layout: {
+      //   //   blog: 'src/components/Card.svelte'
+      //   // },
+      //   extension: 'md'
+      // })
+    ]
       svelte.extensions = ['.svelte', '.md']
       return svelte
   },
