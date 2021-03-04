@@ -1,6 +1,7 @@
 <script>
   import { Router } from "@roxi/routify";
   import { routes } from "../.routify/routes";
+  console.log(routes);
 
   let blogPostRoute = routes.filter(route => route.file == '[slug].svelte')[0];
   let fallbackRoute = routes.filter(route => route.file == '_fallback.svelte')[0];
