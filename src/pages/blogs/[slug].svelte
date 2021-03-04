@@ -6,7 +6,6 @@
   slug = decodeURI($url().replace("/", ""));
   
   let post = $layout.children.filter((c) => c.meta["frontmatter"].slug === slug)[0];
-  post = undefined;
   if (post == undefined)
   {
     // We should redirect to _fallback page
