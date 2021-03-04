@@ -9,6 +9,7 @@
   const _urls = [
     ["./homepage", "🏠", "#FF6500"],
     ["./blogs", "Blogs", "#8FD5DB"],
+    ["./contact", "Contact", "#8FD5DB"],
   ];
   $: urls = _urls.map(([path, name, color]) => ({
     name,

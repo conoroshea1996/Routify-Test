@@ -1,4 +1,4 @@
 ---
-slug: "Cool Blog"
+slug: "Cool-Blog"
 title: Blog One
 ---

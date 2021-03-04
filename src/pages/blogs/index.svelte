@@ -39,7 +39,7 @@
   <ul class="posts">
     {#each posts as {meta, path}}
       <li class="card"> 
-        <a class="title" href="blogs/{meta.frontmatter.slug}">{meta.frontmatter.title}</a>
+        <a class="title" href="/{meta.frontmatter.slug}">{meta.frontmatter.title}</a>
       </li>
     {/each}
   </ul>
