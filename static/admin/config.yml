@@ -10,17 +10,6 @@ logo_url: https://routify-netlifycms.netlify.app/images/hero.jpg
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
-  - name: "team"
-    label: "Team members"
-    extension: "md"
-    folder: "src/pages/team"
-    create: true # Allow users to create new documents in this collection
-    slug: "{{name}}"
-    fields:
-      - { name: "name", label: "name", widget: "string" }
-      - { name: "bio", label: "bio", widget: "markdown" }
-      - { name: "order", label: "order", widget: "number" }
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
   - name: "homepage"
     label: "Homepage"
     extension: "md"
@@ -30,12 +19,12 @@ collections:
     fields:
       - { name: "title", label: "Title (<h1>)", widget: "string" }
       - { name: "text", label: "text", widget: "markdown" }
-  - name: "markdown"
-    label: "markdown"
-    extension: "md"
-    folder: "src/pages/cms/markdown"
-    create: false # Allow users to create new documents in this collection
-    slug: "{{name}}"
+  - name: "blog"
+    label: "Blogs"
+    folder: "src/pages/blogs"
+    create: true # Allow users to create new documents in this collection
+    slug: "{{title}}"
     fields:
-      - { name: "title", label: "Title (<h1>)", widget: "string" }
-      - { name: "text", label: "text", widget: "markdown" }
+      - {name: "slug", label: "slug", widget: "string"}
+      - { name: "title", label: "title", widget: "string" }
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
