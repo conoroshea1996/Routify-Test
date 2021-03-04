@@ -2,9 +2,9 @@
   import { Router } from "@roxi/routify";
   import { routes } from "../.routify/routes";
   console.log(routes);
-
-  let blogPostRoute = routes.filter(route => route.file == '[slug].svelte')[0];
-  let fallbackRoute = routes.filter(route => route.file == '_fallback.svelte')[0];
+  
+  let blogPostRoute = routes.filter(route => (route.file == '[slug].svelte' || route.id == '_blogs__slug'))[0];
+  let fallbackRoute = routes.filter(route => (route.file == '_fallback.svelte' || route.id == '__fallback'))[0];
 
   console.log(blogPostRoute);
   // Override the options to remove /blog from the urls
