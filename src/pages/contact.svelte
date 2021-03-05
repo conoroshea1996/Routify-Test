@@ -39,12 +39,11 @@ form input {
 	        transition:0.2s ease all;
 }
 
-form input[type=text]:focus,
-form input[type="password"]:focus {
+form input[type=text]:focus {
 	border-color:cornflowerblue;
 }
 
-input[type=submit] {
+button {
 	padding:15px 50px;
 	width: 100%;
 	background:#1abc9c;
@@ -61,33 +60,18 @@ input[type=submit] {
 	        transition:0.2s ease all;
 }
 
-input[type=submit]:hover {
+button:hover {
 	opacity:0.8;
 }
 
-input[type="submit"]:active {
+button:active {
 	opacity:0.4;
 }
-
-.forgot,
-.register {
-	margin:10px;
-	float:left;
-	clear:left;
-	display:inline-block;
-	color:cornflowerblue;
-	text-decoration:none;
-}
-
-.forgot:hover,
-.register:hover {
-	color:darkgray;
-}
-
 </style>
 
 <form name="contact" method="POST" data-netlify="true">
-  <label for="email">Email</label>
-  <input type="text" id="email" name="email" placeholder="Email" autocomplete="off" required />
-  <input type="submit" name="submit" value="Sign up" />
+	  <label>Your Name: <input type="text" name="name" /></label>   
+	  <label>Your Email: <input type="email" name="email" /></label>
+	  <input type="hidden" name="form-name" value="contact" />
+	  <button type="submit">Send</button>
 </form>
