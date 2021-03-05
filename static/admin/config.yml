@@ -7,6 +7,7 @@ backend:
 # publish_mode: editorial_workflow # didn't work when testing locally...
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+publish_mode: editorial_workflow
 collections:
   - name: "homepage"
     label: "Homepage"
@@ -27,3 +28,16 @@ collections:
       - { name: "title", label: "title", widget: "string" }
       - { name: "main", label : "main", widget : "markdown" }
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - name: author
+        label: Author
+        widget: relation
+        collection: authors
+        searchFields: [name, twitterHandle]
+        valueField: name
+  - name: authors
+    label: Authors
+    folder: "src/data/authors"
+    create: true
+    fields:
+      - {name: name, label: Name , widget: "string"}
+      - {name: profileImage, label: Profile Image , widget: "image"}
