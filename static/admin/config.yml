@@ -25,19 +25,28 @@ collections:
     slug: "{{title}}"
     fields:
       - {name: "slug", label: "slug", widget: "string"}
-      - { name: "title", label: "title", widget: "string" }
-      - { name: "main", label : "main", widget : "markdown" }
+      - {name: "title", label: "title", widget: "string" }
+      - {name: "main", label : "main", widget : "markdown" }
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - name: author
         label: Author
         widget: relation
         collection: authors
-        searchFields: [name, twitterHandle]
-        valueField: name
+        searchFields: [name]
+        valueField: "name"
+        displayFields: [name]
+      - label: "Categories"
+        name: "Categories"
+        widget: "select"
+        multiple: true
+        options:
+          - { label: "Recruitment", value: "Recruitment" }
+          - { label: "Test", value: "Test" }
+          - { label: "Candidates", value: "Candidates" }
   - name: authors
     label: Authors
-    folder: "src/data/authors"
+    folder: "src/pages/_authors"
     create: true
+    slug: "{{name}}"
     fields:
       - {name: name, label: Name , widget: "string"}
-      - {name: profileImage, label: Profile Image , widget: "image"}
