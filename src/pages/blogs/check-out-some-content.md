@@ -88,4 +88,5 @@ main: >-
 
   **Want to try recruiting software that helps you source talent and hire the best candidates?** [Sign up for a demo today](https://my.hirehive.io/register?utm_source=https%3a%2f%2fwww.google.com%2f?utm_source=https%3A%2F%2Fwww.google.com%2F).
 thumbnail: /images/uploads/andre-benz-ppsgiw3iwz4-unsplash.jpg
+author: Conor
 ---
