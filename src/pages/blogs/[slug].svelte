@@ -1,6 +1,8 @@
 <script>
   import { url, layout, page,goto } from '@roxi/routify'
   export let slug;  
+
+  import Marker from "marked"
   
   // We need to get the slug manually now since the page doesn't have a /slug anymore
   slug = decodeURI($url().replace("/", ""));
@@ -14,7 +16,19 @@
 
   const blog = post.meta.frontmatter;
 </script>
-
+<style global>
+ .main{
+   width: 60%;
+   margin: auto;
+ }
+ .main > * {
+   text-align: center;
+ }
+</style>
 <h1> {blog.slug} </h1>
 
 <h4> {blog.title} </h4>
+
+<div class="main">
+ {@html Marker(blog.main)}
+</div>

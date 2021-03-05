@@ -25,4 +25,5 @@ collections:
     fields:
       - {name: "slug", label: "slug", widget: "string"}
       - { name: "title", label: "title", widget: "string" }
+      - { name: "main", label : "main", widget : "markdown" }
       - {label: "Featured Image", name: "thumbnail", widget: "image"}

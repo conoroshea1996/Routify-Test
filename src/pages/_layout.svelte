@@ -33,7 +33,6 @@
   }
   div.inset {
     bottom: 64px;
-    overflow: hidden;
   }
 
 </style>
