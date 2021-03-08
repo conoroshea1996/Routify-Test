@@ -9,25 +9,20 @@ media_folder: "static/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 publish_mode: editorial_workflow
 collections:
-  - name: "homepage"
-    label: "Homepage"
-    extension: "md"
-    folder: "src/pages/cms/homepage"
-    create: false # Allow users to create new documents in this collection
-    slug: "{{title}}"
-    fields:
-      - { name: "title", label: "Title (<h1>)", widget: "string" }
-      - { name: "text", label: "text", widget: "markdown" }
+
   - name: "blog"
     label: "Blogs"
     folder: "src/pages/blogs"
     create: true # Allow users to create new documents in this collection
     slug: "{{title}}"
     fields:
-      - {name: "slug", label: "slug", widget: "string"}
-      - {name: "title", label: "title", widget: "string" }
-      - {name: "main", label : "main", widget : "markdown" }
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - label: "Published Date"
+        name: "publishedDate"
+        widget: "datetime"
+        default: ""
+        date_format: "DD.MM.YYYY" # e.g. 24.12.2021
+        format: "LLL"
+        picker_utc: true
       - name: author
         label: Author
         widget: relation
@@ -35,6 +30,10 @@ collections:
         searchFields: [name]
         valueField: "name"
         displayFields: [name]
+      - {name: "slug", label: "slug", widget: "string"}
+      - {name: "title", label: "title", widget: "string" }
+      - {name: "main", label : "main", widget : "markdown" }
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - label: "Categories"
         name: "Categories"
         widget: "select"
@@ -43,6 +42,7 @@ collections:
           - { label: "Recruitment", value: "Recruitment" }
           - { label: "Test", value: "Test" }
           - { label: "Candidates", value: "Candidates" }
+
   - name: authors
     label: Authors
     folder: "src/pages/_authors"

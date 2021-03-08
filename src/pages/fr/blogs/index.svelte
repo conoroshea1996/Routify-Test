@@ -47,9 +47,7 @@
   </style>
   
   
-  <h1>Blogs</h1>
-  {pageNumber}
-  {$params.page}
+  <h1>Bonjour Blogs</h1>
   <ul class="posts">
     {#each results as {meta, path}}
       <li class="card"> 
@@ -61,9 +59,9 @@
 
 
   {#if totalPages != pageNumber}
-    <a href={$url(`/blogs?page=${pageNumber + 1}`)}> Next</a>
+    <a href={$url(`/fr/blogs?page=${pageNumber + 1}`)}> Next</a>
   {/if}
 
   {#if pageNumber != 1 }
-    <a href={$url(`/blogs?page=${pageNumber - 1}`)}> Previous </a>
+    <a href={$url(`/fr/blogs?page=${pageNumber - 1}`)}> Previous </a>
   {/if}
